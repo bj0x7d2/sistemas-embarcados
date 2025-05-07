@@ -114,6 +114,11 @@ Algumas operações frequentes podem ser realizados através da barra inferior o
         </div>
 </div>
 
+Antes de compilar o projeto, é necessário modificar o arquivo <code>platformio.ini</code> para especificar o velocidade de comunicação serial, que é 115200 bps por padrão no ESP32. Para isso, adicione a linha abaixo no arquivo <code>platformio.ini</code> na seção **[env:esp32dev]**.
+
+```ini
+monitor_speed = 115200
+```
 Para testar o funcionamento do ambiente de desenvolvimento, compile o projeto (***build***) e enviar o código para a placa (***upload***). Após o upload, abra o monitor serial (***serial monitor***) e verifique se a mensagem "Turning the LED ON!" e "Turning the LED OFF!" estão sendo exibidas a cada segundo.
 
 ## ESP-IDF
